@@ -9,7 +9,6 @@
 4. [Использование](#использование)
 5. [Тестирование](#тестирование)
 6. [Документация](#документация)
-7. [Структура проекта](#структура-проекта)
 
 ## Что Может проект:
 
@@ -36,11 +35,6 @@
    git clone https://github.com/<ваш-логин>/cipher-project.git
    cd cipher-project
 
-**Для получения Документации в виде HTML страницы:**
-
-1. Установите PyDoctor
-2. pydoctor --make-html --html-output=docs_all --project-base-dir="." --docformat=restructuredtext ciphers.py main.py test_ciphers.py
-3. Ввести в консоль < open docs_all/index.html >
 
 ## Использование
 
@@ -59,3 +53,11 @@
 - Валидацию входных данных
 - Работу всех трёх шифров
 - Обработку ошибок
+
+## Документация
+ **Для получения Документации в виде HTML страницы:**
+
+1. Установите PyDoctor
+2. pydoctor --make-html --html-output=docs_all --project-base-dir="." --docformat=restructuredtext ciphers.py main.py test_ciphers.py
+3. Ввести в консоль < open docs_all/index.html >
+
