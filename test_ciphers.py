@@ -16,7 +16,6 @@ class TestCiphers(unittest.TestCase):
         """Создание временного файла с алфавитом."""
         self.alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
 
-        # Создаем временный файл с алфавитом
         self.temp_file = tempfile.NamedTemporaryFile(mode='w', encoding='utf-8', delete=False)
         self.temp_file.write(self.alphabet)
         self.temp_file.close()
@@ -53,9 +52,7 @@ class TestCiphers(unittest.TestCase):
         text = "привет"
         key = 3
 
-        # Шифруем
         encrypted = caesar_cipher(text, key, self.alphabet, encrypt=True)
-        # Дешифруем
         decrypted = caesar_cipher(encrypted, key, self.alphabet, encrypt=False)
 
         self.assertEqual(decrypted, text)
