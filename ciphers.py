@@ -49,12 +49,10 @@ def read_alphabet(filepath: str) -> str:
     if not alphabet:
         raise AlphabetError("Алфавит не может быть пустым")
 
-    # Проверяем на дубликаты символов
     if len(alphabet) != len(set(alphabet)):
         raise AlphabetError("Алфавит содержит повторяющиеся символы")
 
     return alphabet
-
 
 def validate_text(text: str, alphabet: str) -> None:
     """
