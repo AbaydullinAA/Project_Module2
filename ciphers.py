@@ -1,8 +1,5 @@
 """Модуль для шифрования и дешифрования текста."""
 
-import os
-from typing import Optional
-
 
 class CipherError(Exception):
     """
@@ -53,6 +50,7 @@ def read_alphabet(filepath: str) -> str:
         raise AlphabetError("Алфавит содержит повторяющиеся символы")
 
     return alphabet
+
 
 def validate_text(text: str, alphabet: str) -> None:
     """
@@ -167,7 +165,7 @@ def atbash_cipher(text: str, alphabet: str, encrypt: bool = True) -> str:
     Шифрует или дешифрует текст с помощью шифра Атбаш.
 
     Шифр Атбаш — это простой шифр подстановки, в котором алфавит
-    переворачивается. Первая буква алфавита заменяется на последнюю,
+    переворачивается. Первая буква алфавит заменяется на последнюю,
     вторая — на предпоследнюю и так далее.
 
     Примечание: Для шифра Атбаш шифрование и дешифрование одинаковы.
