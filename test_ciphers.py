@@ -1,17 +1,11 @@
 """Тесты для модуля шифрования."""
 
-import os
-import tempfile
 import unittest
-
+import tempfile
+import os
 from ciphers import (
-    AlphabetError,
-    CipherError,
-    atbash_cipher,
-    caesar_cipher,
-    read_alphabet,
-    validate_text,
-    vigenere_cipher,
+    read_alphabet, validate_text, caesar_cipher,
+    vigenere_cipher, atbash_cipher, AlphabetError, CipherError
 )
 
 
@@ -22,9 +16,7 @@ class TestCiphers(unittest.TestCase):
         """Создание временного файла с алфавитом."""
         self.alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
 
-        self.temp_file = tempfile.NamedTemporaryFile(
-            mode='w', encoding='utf-8', delete=False
-        )
+        self.temp_file = tempfile.NamedTemporaryFile(mode='w', encoding='utf-8', delete=False)
         self.temp_file.write(self.alphabet)
         self.temp_file.close()
 
