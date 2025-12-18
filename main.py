@@ -11,6 +11,7 @@ from ciphers import (
     atbash_cipher, AlphabetError, CipherError
 )
 
+
 def get_alphabet_file() -> str:
     """
     Запрашивает у пользователя путь к файлу с алфавитом.
@@ -26,6 +27,7 @@ def get_alphabet_file() -> str:
         if os.path.exists(filepath):
             return filepath
         print(f"Ошибка: файл '{filepath}' не найден. Попробуйте снова.")
+
 
 def select_cipher() -> int:
     """
@@ -192,6 +194,7 @@ def main() -> None:
         print("\n\nПрограмма прервана пользователем.")
     except Exception as e:
         print(f"Неожиданная ошибка: {e}")
+
 
 if __name__ == "__main__":
     main()
