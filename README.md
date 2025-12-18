@@ -31,10 +31,8 @@
 
 Для запуска основной программы:
 
-1. **Клонируйте репозиторий:**
-   git clone https://github.com/<ваш-логин>/cipher-project.git
-   cd cipher-project
-
+1. **Введите в консоль**
+    python3 main.py
 
 ## Использование
 
@@ -60,4 +58,3 @@
 1. Установите PyDoctor
 2. pydoctor --make-html --html-output=docs_all --project-base-dir="." --docformat=restructuredtext ciphers.py main.py test_ciphers.py
 3. Ввести в консоль < open docs_all/index.html >
-
